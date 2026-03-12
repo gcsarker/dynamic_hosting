@@ -9,8 +9,8 @@ $files = aws s3api list-objects-v2 `
 --query "Contents[].Key" `
 --output text
 
-$offset = 0
-$n = 100
+$offset = 100
+$n = 200
 
 $subset = $files.Split("`t")[$offset..($offset+$n-1)]
 
